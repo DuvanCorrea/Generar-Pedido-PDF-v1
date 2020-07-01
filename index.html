@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product app</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/59d9627008.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+        Product APP
+        </a>
+        <a href="#" style="text-decoration: none;" class="aling-right"><button type="button" class="btn btn-success" id="button-generate-PDF">Generar PDF</button></a>
+    </nav>
+
+    <div class="container" id="principal">
+        <!--APLICATION-->
+        <div id="app" class="row pt-3">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h4><i class="fas fa-box-open"></i> Agregar prenda</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <div id="product-previw" class="mx-auto">
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="product-img-insert" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">selecciona foto</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input value="Buzo" type="text" name="product-reference" id="product-reference" class="form-control" placeholder="Buzo, sudadera, etc..." required>
+                        </div>
+                        <div class="form-group">
+                            <input value="2" type="number" name="product-quantity" id="product-quantity" class="form-control" placeholder="Cantidad" required>
+                        </div>
+                        <div class="form-group">
+                            <input value="M" type="text" name="product-size" id="product-size" class="form-control" placeholder="Talla" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Genero</label>
+                                </div>
+                                <select class="custom-select" id="product-gender" required>
+                                  <option selected>Masculino</option>
+                                  <option value="Femenino">Femenino</option>
+                                  <option value="otro">otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <textarea value="Notasss" class="form-control" id="product-notes" name="product-notes" cols="20" rows="2" aria-label="With textarea" placeholder="Notes"></textarea>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="submit" class="btn btn-primary btn-block font-weight-bold" value="Add" name="button-product-add" id="button-product-add">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div id="products-adds">
+
+                </div>
+            </div>
+            <script src="js/jspdf.min.js"></script>
+            <script src="js/app.js"></script>
+</body>
+
+</html>
