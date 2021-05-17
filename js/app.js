@@ -70,7 +70,7 @@ class UI {
         if (button.name === "product-edit") {
             button.className = `btn btn-primary align-bottom`;
 
-            // eliminando el br de la lista de prouctos y gardando contenido
+            // eliminando el br de la lista de productos y guardando contenido
             var hijosReales = [];
             let contenido = []; // atributos antiguos
             let cont = 0;
@@ -225,11 +225,10 @@ document.getElementById("product-img-insert").onchange = (e) => {
 document.getElementById("button-generate-PDF").addEventListener("click", () => {
 
     var totalHijos = document.getElementById("products-adds");
-    console.log(typeof(totalHijos));
+    console.log(totalHijos);
 
     //var resume = document.getElementById("product-resumen").children[0].;
 
-    /*
     html2canvas(document.getElementById("products-adds"), {
         onrendered: (canvas) => {
             var image = canvas.toDataURL("images/image.png");
@@ -238,6 +237,5 @@ document.getElementById("button-generate-PDF").addEventListener("click", () => {
             doc.save("test.pdf");
         }
     });
-    */
 
 });
